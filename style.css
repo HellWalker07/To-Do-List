@@ -1,0 +1,122 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Font */
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); /* BG Colour */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* shadow */
+    width: 100%;
+    max-width: 450px; /* container width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-container:hover {
+    transform: translateY(-5px); /* hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* shadow */
+}
+
+.logo {
+    display: block;
+    max-width: 300px; /* logo siza */
+    margin: 0 auto 20px; /* alignment*/
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem; /* font size increase */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#task-input, #description-input, #due-date, #priority, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+}
+
+#task-input:focus, #description-input:focus, #due-date:focus, #priority:focus {
+    border-color: #74ebd5; /* gradiant colour */
+    box-shadow: 0 0 8px rgba(116, 235, 213, 0.5); /* gradiant colour*/
+    outline: none;
+}
+
+button {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Gradient for the button */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ACB6E5, #74ebd5); /* Inverted gradient for hover */
+    transform: translateY(-2px); /* Button hover*/
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: translateX(5px); /* hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* shadow*/
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+.high {
+    border-left: 5px solid #ff6b6b; /* Red bar to indicate high priority */
+}
+
+.medium {
+    border-left: 5px solid #ffa502; /* Orange bar for medium priority */
+}
+
+.low {
+    border-left: 5px solid #2ed573; /* Green bar for low priority */
+}
+
+button.delete-btn {
+    padding: 30px 25px;
+    background: none;
+    border: none;
+    color: #ff4757; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button.delete-btn:hover {
+    color: #ff6b81; 
+}

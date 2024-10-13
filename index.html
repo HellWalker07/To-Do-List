@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- creating a division for to do list -->
+    <div class="todo-container">
+        <img src="download.png" alt="Logo" class="logo">
+        
+        <!-- created a form for priotizing the tasks -->
+        <form id="todo-form"> 
+            <input type="text" id="task-input" placeholder="Add a task..." required>
+            <label for="due-date">Due Date:</label>
+
+            <!-- added a calender to set a due date-->
+            <input type="date" id="due-date">
+            <label for="priority">Priority:</label>
+
+            <!-- priority set according to importance of task -->
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <!-- button created to add the task in the list -->
+            <button type="submit">Add Task</button>
+        </form>
+        
+        <!-- added js buttons to filter task  -->
+        <div id="filters">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('active')">Active</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+            <button onclick="filterTasks('overdue')">Overdue</button>
+        </div>
+        
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
